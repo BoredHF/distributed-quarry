@@ -18,7 +18,7 @@ wget run https://raw.githubusercontent.com/BoredHF/distributed-quarry/main/insta
 wget run https://raw.githubusercontent.com/BoredHF/distributed-quarry/main/install.lua selector
 ```
 
-The installer downloads only the chosen role plus shared modules and creates `startup.lua` when one does not already exist. It intentionally retains existing config and startup files. Configure `controller/config.lua` before first run; worker settings are in `miner/config.lua`. Use ender modems if the controller is outside wireless range.
+The installer downloads only the chosen role plus shared modules and creates `startup.lua` when one does not already exist. Re-running it updates program files atomically while retaining existing config and startup files. Configure `controller/config.lua` before first run; worker settings are in `miner/config.lua`. Use ender modems if the controller is outside wireless range.
 
 ## Configure docks and storage
 
