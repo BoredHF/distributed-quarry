@@ -1,0 +1,12 @@
+# CraftOS runtime state and bounded logs are generated on the installed machines.
+controller/state/
+miner/state.db
+miner/state.db.bak
+miner/state.db.tmp
+miner/config.db
+miner/config.db.bak
+miner/config.db.tmp
+selector/state.db
+selector/state.db.bak
+selector/state.db.tmp
+logs/
