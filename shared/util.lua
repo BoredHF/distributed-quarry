@@ -4,7 +4,12 @@ function M.copy(t)
   if type(t) ~= "table" then return t end
   local r = {}; for k,v in pairs(t) do r[k] = M.copy(v) end; return r
 end
-function M.now() return os.epoch and os.epoch("utc") or os.clock() * 1000 end
+function M.now()
+  if os.epoch then return os.epoch("utc") end
+  -- CraftOS releases before os.epoch still provide a persistent world day/time.
+  if os.day and os.time then return (os.day() * 86400000) + math.floor(os.time() * 3600000) end
+  return os.clock() * 1000
+end
 function M.id(prefix) return prefix .. "-" .. tostring(os.getComputerID()) .. "-" .. tostring(M.now()) end
 function M.clamp(v, lo, hi) return math.max(lo, math.min(hi, v)) end
 function M.count(t) local n=0; for _ in pairs(t or {}) do n=n+1 end; return n end
