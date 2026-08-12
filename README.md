@@ -10,12 +10,12 @@ Coordinates are local: the selected top origin is `(0,0,0)`, +X is width, +Z len
 
 ## Install
 
-After the initial project push, `install.lua` is already configured for this repository. If you fork it, change `BASE_URL` to your fork's raw `main` URL, then run one of:
+Use these exact commands. Do **not** use a `github.com/.../blob/...` page URL: it downloads HTML, which CraftOS reports as `unexpected symbol near '<'`. If you fork the project, change `BASE_URL` to your fork's raw `main` URL.
 
 ```
-wget run <RAW_URL>/install.lua controller
-wget run <RAW_URL>/install.lua miner
-wget run <RAW_URL>/install.lua selector
+wget run https://raw.githubusercontent.com/BoredHF/distributed-quarry/main/install.lua controller
+wget run https://raw.githubusercontent.com/BoredHF/distributed-quarry/main/install.lua miner
+wget run https://raw.githubusercontent.com/BoredHF/distributed-quarry/main/install.lua selector
 ```
 
 The installer downloads only the chosen role plus shared modules and creates `startup.lua` when one does not already exist. It intentionally retains existing config and startup files. Configure `controller/config.lua` before first run; worker settings are in `miner/config.lua`. Use ender modems if the controller is outside wireless range.

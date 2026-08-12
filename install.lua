@@ -1,7 +1,7 @@
 -- Change this before publishing. It must be the raw directory containing this repository.
 local BASE_URL="https://raw.githubusercontent.com/BoredHF/distributed-quarry/main/"
 local role=...
-if role~="controller" and role~="miner" and role~="selector" then print("Usage: wget run <url>/install.lua controller|miner|selector");return end
+if role~="controller" and role~="miner" and role~="selector" then print("Usage: wget run https://raw.githubusercontent.com/BoredHF/distributed-quarry/main/install.lua controller|miner|selector");return end
 local files={"shared/version.lua","shared/util.lua","shared/persistence.lua","shared/protocol.lua","shared/config.lua"}
 if role=="controller" then files[#files+1]="controller/config.lua";files[#files+1]="controller/quarry.lua";files[#files+1]="controller/jobs.lua";files[#files+1]="controller/miners.lua";files[#files+1]="controller/scheduler.lua";files[#files+1]="controller/ui.lua";files[#files+1]="controller/main.lua";files[#files+1]="controller/startup.lua"
 elseif role=="miner" then for _,f in ipairs({"config.lua","navigation.lua","fuel.lua","inventory.lua","dock.lua","mining.lua","state_machine.lua","main.lua","startup.lua"}) do files[#files+1]="miner/"..f end
