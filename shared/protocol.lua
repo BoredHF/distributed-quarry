@@ -1,5 +1,5 @@
-local version=require("shared.version")
-local util=require("shared.util")
+local version=require("/shared.version")
+local util=require("/shared.util")
 local M={ name=version.protocol }
 function M.openModem()
   for _,side in ipairs(rs.getSides()) do

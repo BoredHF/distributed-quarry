@@ -1,4 +1,4 @@
-local nav=require("miner.navigation")
+local nav=require("/miner.navigation")
 local M={}
 function M.total(job) return (job.maxX-job.minX+1)*(job.maxZ-job.minZ+1)*(job.topY-job.bottomY+1) end
 function M.target(job,index)

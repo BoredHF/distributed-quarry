@@ -1,4 +1,4 @@
-local protocol=require("shared.protocol");local persist=require("shared.persistence");local sm=require("miner.state_machine");local nav=require("miner.navigation");local controls=require("selector.controls")
+local protocol=require("/shared.protocol");local persist=require("/shared.persistence");local sm=require("/miner.state_machine");local nav=require("/miner.navigation");local controls=require("/selector.controls")
 local state=persist.load("selector/state.db",sm.new());local function save() persist.save("selector/state.db",state) end
 local ok,err=protocol.openModem();if not ok then error(err) end;nav.init(state,{movementRetries=10},save)
 local first,second=nil,nil

@@ -1,4 +1,4 @@
-local util=require("shared.util")
+local util=require("/shared.util")
 local M={}
 local function dockFor(dockId,cfg)
   if cfg.dock.docks and cfg.dock.docks[dockId] then return util.copy(cfg.dock.docks[dockId]) end

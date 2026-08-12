@@ -1,4 +1,4 @@
-local util = require("shared.util")
+local util = require("/shared.util")
 
 local M = {}
 

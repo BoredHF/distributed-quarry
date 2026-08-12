@@ -1,13 +1,13 @@
-local protocol = require("shared.protocol")
-local persist = require("shared.persistence")
-local util = require("shared.util")
-local configCheck = require("shared.config")
-local quarryLib = require("controller.quarry")
-local minerLib = require("controller.miners")
-local scheduler = require("controller.scheduler")
-local ui = require("controller.ui")
+local protocol = require("/shared.protocol")
+local persist = require("/shared.persistence")
+local util = require("/shared.util")
+local configCheck = require("/shared.config")
+local quarryLib = require("/controller.quarry")
+local minerLib = require("/controller.miners")
+local scheduler = require("/controller.scheduler")
+local ui = require("/controller.ui")
 
-local config = persist.load("controller/state/config.db", require("controller.config"))
+local config = persist.load("controller/state/config.db", require("/controller.config"))
 local valid, configError = configCheck.controller(config)
 if not valid then error("Invalid controller/config.lua: " .. configError) end
 

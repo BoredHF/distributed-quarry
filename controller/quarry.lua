@@ -1,4 +1,4 @@
-local util=require("shared.util")
+local util=require("/shared.util")
 local M={}
 function M.validate(q)
   if type(q)~="table" then return false,"quarry definition is not a table" end

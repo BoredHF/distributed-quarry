@@ -1,4 +1,4 @@
-local jobsLib=require("controller.jobs")
+local jobsLib=require("/controller.jobs")
 local M={ input="", commandMode=false, notice="" }
 local function writeAt(x,y,s) term.setCursorPos(x,y); term.write(s) end
 local function fit(s,w) s=tostring(s or ""); return s:sub(1,w) end

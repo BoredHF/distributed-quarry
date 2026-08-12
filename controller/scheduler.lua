@@ -1,4 +1,4 @@
-local util=require("shared.util")
+local util=require("/shared.util")
 local M={}
 local function distance(m,j)
   local p=m.position or m.dock or {x=0,z=0}; return math.abs((p.x or 0)-j.minX)+math.abs((p.z or 0)-j.minZ)
